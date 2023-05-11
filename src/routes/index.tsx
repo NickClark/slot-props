@@ -1,25 +1,25 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { type DocumentHead, Link } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
+      <Link href="/disclosure"
+        class="m-8 my-3 w-60 h-20 flex items-center justify-center rounded-lg bg-white"
+      >Disclosure Example</Link>
+      <Link href="/menu"
+        class="m-8 my-3 w-60 h-20 flex items-center justify-center rounded-lg bg-white"
+      >Menu Example</Link>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: 'Slot Props',
   meta: [
     {
       name: 'description',
-      content: 'Qwik site description',
+      content: 'Slot Prop Issues',
     },
   ],
 };
